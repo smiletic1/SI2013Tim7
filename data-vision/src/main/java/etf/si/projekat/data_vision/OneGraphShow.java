@@ -54,7 +54,7 @@ public class OneGraphShow extends JFrame {
 		//EventQueue.invokeLater(new Runnable() {
 		//	public void run() {
 				try {
-				   new OneGraphShow();
+				  // new OneGraphShow();
 				
 				     		    
 				} catch (Exception e) {
@@ -67,8 +67,8 @@ public class OneGraphShow extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public OneGraphShow() {
-		    
+	public OneGraphShow() {                                               
+		
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	        setSize(1000, 1000);
 	        
@@ -124,10 +124,11 @@ public class OneGraphShow extends JFrame {
         
 	     
 	     f = new JFrame();
-	     f.getContentPane().setBackground(Color.WHITE);
+	     f.setEnabled(true);
+	     f.getContentPane().setBackground(Color.white);
 	     f.getContentPane().setBounds(new Rectangle(10, 10, 10, 10));
 	     f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-	    f.setVisible(true);
+	     f.setVisible(true);
 	   
      
 	  
@@ -137,10 +138,10 @@ public class OneGraphShow extends JFrame {
 			contentPane = new JPanel();
 			contentPane.setAlignmentX(Component.RIGHT_ALIGNMENT);
 			contentPane.setBounds(new Rectangle(50, 0, 50, 50));
-			contentPane.setBackground(Color.WHITE);
+			contentPane.setBackground(Color.white);
 			contentPane.setBounds(10,10,5,5);
 			
-	        f.getContentPane().add(contentPane, BorderLayout.NORTH);
+	       f.getContentPane().add(contentPane, BorderLayout.NORTH);
 	    
 
 		
