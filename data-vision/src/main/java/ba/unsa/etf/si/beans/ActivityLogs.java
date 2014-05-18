@@ -1,17 +1,25 @@
 package ba.unsa.etf.si.beans;
 
-public class ActivityLogs implements java.io.Serializable {
-	
-	long activitylogs_id;
+import java.sql.Date;
+
+
+
+public class ActivityLogs implements java.io.Serializable{
+
+	Long activitylogs_id;
 	String command;
-	int isGranted;
-	//datetime timestapm;
-	User user;
-	public long getActivitylogs_id() {
+	boolean isGranted;
+	Date timestamp;
+	String user;
+	String fixtureName;
+	
+	public ActivityLogs(){}
+
+	public Long getActivitylogs_id() {
 		return activitylogs_id;
 	}
 
-	public void setActivitylogs_id(long activitylogs_id) {
+	public void setActivitylogs_id(Long activitylogs_id) {
 		this.activitylogs_id = activitylogs_id;
 	}
 
@@ -23,33 +31,38 @@ public class ActivityLogs implements java.io.Serializable {
 		this.command = command;
 	}
 
-	public int getIsGranted() {
+	public boolean isGranted() {
 		return isGranted;
 	}
 
-	public void setIsGranted(int isGranted) {
+	public void setGranted(boolean isGranted) {
 		this.isGranted = isGranted;
 	}
 
-	public User getUser() {
+	public Date getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(Date timestamp) {
+		this.timestamp = timestamp;
+	}
+
+	public String getUser() {
 		return user;
 	}
 
-	public void setUser(User user) {
+	public void setUser(String user) {
 		this.user = user;
 	}
 
-	public String getFixtureTime() {
-		return fixtureTime;
+	public String getFixtureName() {
+		return fixtureName;
 	}
 
-	public void setFixtureTime(String fixtureTime) {
-		this.fixtureTime = fixtureTime;
+	public void setFixtureName(String fixtureName) {
+		this.fixtureName = fixtureName;
 	}
-
-	String fixtureTime;
 	
-	public ActivityLogs() {}
 	
 	
 
