@@ -17,8 +17,8 @@
         <many-to-one name="user" class="ba.unsa.etf.si.beans.User" fetch="join">
             <column name="USER" />
         </many-to-one>
-        <property name="fixtureTime" type="java.lang.String">
-            <column name="FIXTURETIME" />
+        <property name="fixtureName" type="java.lang.String">
+            <column name="FIXTURENAME" />
         </property>
     </class>
 </hibernate-mapping>
