@@ -5,6 +5,10 @@ import java.util.Calendar;
 
 
 public class EventLogs implements java.io.Serializable{
+	/**
+	 * 
+	 */
+
 	Long eventlogs_id;
 	String device_name;
 	String device_type;

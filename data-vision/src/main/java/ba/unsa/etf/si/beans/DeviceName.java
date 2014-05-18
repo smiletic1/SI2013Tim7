@@ -2,6 +2,10 @@ package ba.unsa.etf.si.beans;
 
 public class DeviceName implements java.io.Serializable {
 	
+	/**
+	 * 
+	 */
+
 	public DeviceName() {}
 	long devicename_id;
 	public long getDevicename_id() {

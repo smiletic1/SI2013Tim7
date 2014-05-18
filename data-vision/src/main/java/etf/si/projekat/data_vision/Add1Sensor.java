@@ -17,6 +17,10 @@ import javax.swing.DefaultComboBoxModel;
 
 public class Add1Sensor extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
 
@@ -56,7 +60,7 @@ public class Add1Sensor extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				//prikaz grafa
-				OneGraphShow og=new OneGraphShow();
+				OneGraphShow og = new OneGraphShow();
 			//	og.setVisible(true);
 				
 				
