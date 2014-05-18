@@ -5,14 +5,14 @@
  <session-factory name="">
   <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
   <property name="hibernate.connection.password">teampassword</property>
-  <property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/data_vision_db</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/data_vision_db</property>
   <property name="hibernate.connection.username">team7</property>
   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
   <property name="hibernate.hbm2ddl.auto">update</property>
-  <mapping resource="ba/unsa/etf/si/beans/User.hbm.xml"/>
-  <mapping resource="ba/unsa/etf/si/beans/EventLogs.hbm.xml"/>
-  <mapping resource="ba/unsa/etf/si/beans/DeviceType.hbm.xml"/>
-  <mapping resource="ba/unsa/etf/si/beans/DeviceName.hbm.xml"/>
   <mapping resource="ba/unsa/etf/si/beans/ActivityLogs.hbm.xml"/>
+  <mapping resource="ba/unsa/etf/si/beans/DeviceName.hbm.xml"/>
+  <mapping resource="ba/unsa/etf/si/beans/DeviceType.hbm.xml"/>
+  <mapping resource="ba/unsa/etf/si/beans/EventLogs.hbm.xml"/>
+  <mapping resource="ba/unsa/etf/si/beans/User.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>
