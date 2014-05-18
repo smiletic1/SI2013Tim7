@@ -22,7 +22,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/fax/VI semester/SI data-vision/gral-core-0.10/gral-core-0.10/lib/gral-core-0.10.jar"/>
-	<classpathentry kind="lib" path="D:/fax/VI semester/SI data-vision/gral-core-0.10/gral-core-0.10/lib/VectorGraphics2D-0.9.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Adnan Omanovic/Documents/GitHub/SI2013-Tim-7/data-vision/gral-core-0.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Adnan Omanovic/Documents/GitHub/SI2013-Tim-7/data-vision/VectorGraphics2D-0.9.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
