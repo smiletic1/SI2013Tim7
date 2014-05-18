@@ -41,8 +41,9 @@ public class Main {
 	 Transaction t = session.beginTransaction(); 
 	 
 	 System.out.println("Unesite id loga"); 
-	 long activitylogs_id = sc.nextLong(); 
-	 ActivityLogs s = (ActivityLogs) session.get(ActivityLogs.class, activitylogs_id); 
+	 long id = sc.nextLong();
+	 ActivityLogs s = (ActivityLogs) session.get(ActivityLogs.class, id);
+
 	 if (s==null) { 
 	 System.out.println("Nema log sa tim IDom u bazi"); 
 	 } else { 
