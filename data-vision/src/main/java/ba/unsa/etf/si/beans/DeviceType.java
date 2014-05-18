@@ -15,5 +15,7 @@ public class DeviceType implements java.io.Serializable  {
 		this.type = type;
 	}
 	String type;
+	
+	public DeviceType() {}
 
 }
