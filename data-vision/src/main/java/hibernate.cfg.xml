@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC
-		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-    <session-factory>
-        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.password">team7password</property>
-        <property name="hibernate.connection.url">jdbc:mysql://&lt;localhost:3307&gt;/&lt;data_vision_db&gt;</property>
-        <property name="hibernate.connection.username">team7</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-    </session-factory>
+ <session-factory name="">
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.password">teampassword</property>
+  <property name="hibernate.connection.url">jdbc:mysql://&lt;localhost:3307&gt;/&lt;data_vision_db&gt;</property>
+  <property name="hibernate.connection.username">team7</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.hbm2ddl.auto">update</property>
+  <mapping resource="ba/unsa/etf/si/beans/User.hbm.xml"/>
+  <mapping resource="ba/unsa/etf/si/beans/EventLogs.hbm.xml"/>
+  <mapping resource="ba/unsa/etf/si/beans/DeviceType.hbm.xml"/>
+  <mapping resource="ba/unsa/etf/si/beans/DeviceName.hbm.xml"/>
+  <mapping resource="ba/unsa/etf/si/beans/ActivityLogs.hbm.xml"/>
+ </session-factory>
 </hibernate-configuration>
