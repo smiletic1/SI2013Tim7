@@ -52,4 +52,13 @@
 
   </repositories>
   
+  <build>
+  	<plugins>
+  		<plugin>
+  			<groupId>org.hibernate</groupId>
+  			<artifactId>hibernate-maven-plugin</artifactId>
+  			<version>3.5.0.Beta-1</version>
+  		</plugin>
+  	</plugins>
+  </build>
 </project>
