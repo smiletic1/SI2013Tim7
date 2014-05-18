@@ -57,7 +57,7 @@ public class Add1Sensor extends JFrame {
 				
 				//prikaz grafa
 				OneGraphShow og=new OneGraphShow();
-				og.setVisible(true);
+			//	og.setVisible(true);
 				
 				
 			

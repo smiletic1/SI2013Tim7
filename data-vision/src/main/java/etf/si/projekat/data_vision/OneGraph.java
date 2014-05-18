@@ -70,7 +70,7 @@ public class OneGraph extends JFrame {
 		
 		Choice choice = new Choice();
 		choice.setBounds(177, 48, 117, 20);
-		choice.add("Chart");
+		choice.add("Bar");
 		choice.add("Line");
 		contentPane.add(choice);
 		
