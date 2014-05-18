@@ -3,7 +3,7 @@ package ba.unsa.etf.si.beans;
 public class User implements java.io.Serializable {
 	
 	long user_id;
-	String a;
+
 	public long getUser_id() {
 		return user_id;
 	}
