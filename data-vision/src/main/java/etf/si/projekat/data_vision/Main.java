@@ -32,8 +32,8 @@ public class Main {
 	 s.setUser("Korisnik");
 	 s.setFixtureName("Light");
 	 	 
-	 Long id = (Long) session.save(s); 
-	 System.out.println("Dodan log sa IDom "+id); 
+	 Long activitylogs_id = (Long) session.save(s); 
+	 System.out.println("Dodan log sa IDom "+activitylogs_id); 
 	 t.commit(); 
 	 } 
 	 
@@ -41,8 +41,8 @@ public class Main {
 	 Transaction t = session.beginTransaction(); 
 	 
 	 System.out.println("Unesite id loga"); 
-	 long id = sc.nextLong(); 
-	 ActivityLogs s = (ActivityLogs) session.get(ActivityLogs.class, id); 
+	 long activitylogs_id = sc.nextLong(); 
+	 ActivityLogs s = (ActivityLogs) session.get(ActivityLogs.class, activitylogs_id); 
 	 if (s==null) { 
 	 System.out.println("Nema log sa tim IDom u bazi"); 
 	 } else { 
