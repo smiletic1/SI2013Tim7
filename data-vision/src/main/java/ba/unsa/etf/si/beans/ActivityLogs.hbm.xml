@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 18, 2014 4:30:06 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="ba.unsa.etf.si.beans.ActivityLogs" table="ACTIVITYLOGS">
+        <id name="activitylogs_id" type="long">
+            <column name="ACTIVITYLOGS_ID" />
+            <generator class="native" />
+        </id>
+        <property name="command" type="java.lang.String">
+            <column name="COMMAND" />
+        </property>
+        <property name="isGranted" type="int">
+            <column name="ISGRANTED" />
+        </property>
+        <many-to-one name="user" class="ba.unsa.etf.si.beans.User" fetch="join">
+            <column name="USER" />
+        </many-to-one>
+        <property name="fixtureTime" type="java.lang.String">
+            <column name="FIXTURETIME" />
+        </property>
+    </class>
+</hibernate-mapping>
