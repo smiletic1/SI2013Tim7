@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 18, 2014 4:37:00 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="ba.unsa.etf.si.beans.EventLogs" table="EVENTLOGS">
+        <id name="eventlogs_id" type="long">
+            <column name="EVENTLOGS_ID" />
+            <generator class="native" />
+        </id>
+        <property name="event_message" type="java.lang.String">
+            <column name="EVENT_MESSAGE" />
+        </property>
+        <many-to-one name="device_name" class="ba.unsa.etf.si.beans.DeviceName" fetch="join">
+            <column name="DEVICE_NAME" />
+        </many-to-one>
+        <many-to-one name="device_type" class="ba.unsa.etf.si.beans.DeviceType" fetch="join">
+            <column name="DEVICE_TYPE" />
+        </many-to-one>
+        <many-to-one name="activity_logs" class="ba.unsa.etf.si.beans.ActivityLogs" fetch="join">
+            <column name="ACTIVITY_LOGS" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
