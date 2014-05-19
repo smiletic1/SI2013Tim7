@@ -85,7 +85,8 @@ public class Add1Sensor extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				//prikaz grafa
-				OneGraphShow og=new OneGraphShow();
+				BarPlotShow bp=new BarPlotShow();
+				//OneGraphShow og=new OneGraphShow();
 			//	og.setVisible(true);
 				
 				
