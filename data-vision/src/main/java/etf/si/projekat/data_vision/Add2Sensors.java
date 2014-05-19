@@ -23,10 +23,13 @@ import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.awt.event.ItemListener;
+import java.awt.event.ItemEvent;
 
 public class Add2Sensors extends JFrame {
 	Choice choice = new Choice();
 	Choice choice_1 = new Choice();
+	JButton btnProcess = new JButton("Process");
 	ArrayList<DeviceType> list_device = new ArrayList<DeviceType>();
 	private JPanel contentPane;
 
@@ -72,10 +75,21 @@ public class Add2Sensors extends JFrame {
 		
 		choice_1.setBounds(91, 46, 115, 20);
 		contentPane.add(choice_1);
+		choice.addItemListener(new ItemListener(){
+			public void itemStateChanged(ItemEvent e){
+				fillChoices(1);
+			}
+		});
+		choice_1.addItemListener(new ItemListener(){
+			public void itemStateChanged(ItemEvent e){
+				fillChoices(2);
+			}
+		});
 		
-		JButton btnProcess = new JButton("Process");
+		
 		btnProcess.setBounds(190, 98, 89, 23);
 		contentPane.add(btnProcess);
+		btnProcess.setVisible(false);
 		
 		JButton btnExit = new JButton("Cancel");
 		btnExit.addActionListener(new ActionListener() {
@@ -94,9 +108,10 @@ public class Add2Sensors extends JFrame {
 		   
 		     for (Iterator iterator = list.iterator(); iterator.hasNext();){  
 		        DeviceType dt =(DeviceType) iterator.next();
+		        choice.addItem(dt.getType());
 		        list_device.add(dt);
 		     }
-		     fillChoices();
+		   
 		      t.commit();
 	}
 		catch(Exception e)
@@ -107,16 +122,23 @@ public class Add2Sensors extends JFrame {
 		finally{
 			session.close();
 		}
+	
+	
 	}
-	public void fillChoices(){
-		for(int i=0; i<list_device.size();i++ ){
-			choice.add(list_device.get(i).getType());
+	
+	public void fillChoices(int k){
+		if(k==1) {
+			for(int i=0; i<list_device.size();i++){
+			if(choice.getSelectedItem() == list_device.get(i).getType()) continue;
+			choice_1.add(list_device.get(i).getType());
+			}
+			choice.disable();
+			
 		}
-		for(int i=0; i<list_device.size();i++ ){
-		if(choice.getSelectedItem()==list_device.get(i).getType()) continue;
-		choice_1.add(list_device.get(i).getType());
-		}
-		
+		if(k==2){
+			choice_1.disable();
+			btnProcess.setVisible(true);
+		}	
 	}
 
 }

@@ -20,11 +20,19 @@ import etf.si.projekat.util.HibernateUtil;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class Add4Sensors extends JFrame {
-
+	JButton btnProcess = new JButton("Process");
+	Choice choice_3 = new Choice();
+	Choice choice_2 = new Choice();
+	Choice choice_1 = new Choice();
+	Choice choice = new Choice();
+	ArrayList<DeviceType> list_device = new ArrayList<DeviceType>();
 	private JPanel contentPane;
 
 	/**
@@ -69,25 +77,44 @@ public class Add4Sensors extends JFrame {
 		lblSensorType_3.setBounds(24, 123, 82, 14);
 		contentPane.add(lblSensorType_3);
 		
-		Choice choice = new Choice();
+		
 		choice.setBounds(122, 37, 95, 20);
 		contentPane.add(choice);
+		choice.addItemListener(new ItemListener(){
+			public void itemStateChanged(ItemEvent e){
+				fillChoices(0);
+			}
+		});
 		
-		Choice choice_1 = new Choice();
 		choice_1.setBounds(122, 62, 95, 20);
 		contentPane.add(choice_1);
+		choice_1.addItemListener(new ItemListener(){
+			public void itemStateChanged(ItemEvent e){
+				fillChoices(1);
+			}
+		});
 		
-		Choice choice_2 = new Choice();
 		choice_2.setBounds(122, 88, 95, 20);
 		contentPane.add(choice_2);
+		choice_2.addItemListener(new ItemListener(){
+			public void itemStateChanged(ItemEvent e){
+				fillChoices(2);
+			}
+		});
 		
-		Choice choice_3 = new Choice();
+		
 		choice_3.setBounds(122, 114, 95, 20);
 		contentPane.add(choice_3);
+		choice_3.addItemListener(new ItemListener(){
+			public void itemStateChanged(ItemEvent e){
+				fillChoices(3);
+			}
+		});
 		
-		JButton btnProcess = new JButton("Process");
+		
 		btnProcess.setBounds(247, 165, 89, 23);
 		contentPane.add(btnProcess);
+		btnProcess.setVisible(false);
 		
 		JButton btnCancel = new JButton("Cancel");
 		btnCancel.addActionListener(new ActionListener() {
@@ -106,10 +133,8 @@ public class Add4Sensors extends JFrame {
 		   
 		     for (Iterator iterator = list.iterator(); iterator.hasNext();){  
 		        DeviceType dt =(DeviceType) iterator.next();
+		        list_device.add(dt);
 		        choice.addItem(dt.getType());
-		        choice_1.addItem(dt.getType()); 
-		        choice_2.addItem(dt.getType());
-		        choice_3.addItem(dt.getType());
 		      }
 		      t.commit();
 	}
@@ -120,6 +145,34 @@ public class Add4Sensors extends JFrame {
 		finally{
 			session.close();
 		}
+	}
+	public void fillChoices(int k){
+		if(k==0) {
+			for(int i=0; i<list_device.size();i++){
+			if(choice.getSelectedItem() == list_device.get(i).getType()) continue;
+			choice_1.add(list_device.get(i).getType());
+			}
+			choice.disable();
+			
+		}
+		if(k==1){
+			for(int i=0; i<list_device.size();i++){
+				if((choice.getSelectedItem() == list_device.get(i).getType()) || (choice_1.getSelectedItem() == list_device.get(i).getType())) continue;
+				choice_2.add(list_device.get(i).getType());
+				}
+				choice_1.disable();
+		}
+		if(k==2){
+			for(int i=0; i<list_device.size();i++){
+				if((choice.getSelectedItem() == list_device.get(i).getType()) || (choice_1.getSelectedItem() == list_device.get(i).getType())||(choice_2.getSelectedItem() == list_device.get(i).getType())) continue;
+				choice_3.add(list_device.get(i).getType());
+				}
+				choice_2.disable();
+		}
+		if(k==3){
+			choice_3.disable();
+			btnProcess.setVisible(true);
+		}	
 	}
 	
 

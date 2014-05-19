@@ -19,6 +19,9 @@ import java.awt.event.ActionEvent;
 
 
 
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 
@@ -32,6 +35,7 @@ import org.hibernate.cfg.Configuration;
 
 
 
+
 import etf.si.projekat.util.HibernateUtil;
 import ba.unsa.etf.si.beans.DeviceName;
 import ba.unsa.etf.si.beans.DeviceType;
@@ -39,7 +43,8 @@ import ba.unsa.etf.si.beans.DeviceType;
 
 
 public class Add1Sensor extends JFrame {
-
+	JButton btnProcess = new JButton("Process");
+	Choice choice = new Choice();
 	private JPanel contentPane;
 
 
@@ -64,6 +69,7 @@ public class Add1Sensor extends JFrame {
 	 * Create the frame.
 	 */
 	public Add1Sensor() {
+		btnProcess.setVisible(false);
 		setBounds(100, 100, 298, 160);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -74,7 +80,7 @@ public class Add1Sensor extends JFrame {
 		lblSensorType.setBounds(55, 35, 79, 14);
 		contentPane.add(lblSensorType);
 		
-		JButton btnProcess = new JButton("Process");
+	
 		btnProcess.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -89,6 +95,7 @@ public class Add1Sensor extends JFrame {
 		btnProcess.setBounds(152, 88, 89, 23);
 		contentPane.add(btnProcess);
 		
+		
 		JButton btnExit = new JButton("Cancel");
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -99,10 +106,17 @@ public class Add1Sensor extends JFrame {
 		});
 		btnExit.setBounds(45, 88, 89, 23);
 		contentPane.add(btnExit);
-		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel());
-		comboBox.setBounds(134, 32, 105, 20);
-		contentPane.add(comboBox);
+		
+		
+		choice.setBounds(134, 32, 105, 20);
+		contentPane.add(choice);
+		
+		choice.addItemListener(new ItemListener(){
+			public void itemStateChanged(ItemEvent e){
+				choice.disable();
+				btnProcess.setVisible(true);
+			}
+		});
 			
 		    Session session = HibernateUtil.getSessionFactory().openSession();
 		    Transaction t=null;
@@ -112,7 +126,7 @@ public class Add1Sensor extends JFrame {
 			   
 			     for (Iterator iterator = list.iterator(); iterator.hasNext();){  
 			        DeviceType dt =(DeviceType) iterator.next();
-			        comboBox.addItem(dt.getType());
+			        choice.addItem(dt.getType());
 			        
 			      }
 			      t.commit();
