@@ -164,6 +164,13 @@ public class OneGraph extends JFrame {
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
+		/*UtilDateModel model = new UtilDateModel();
+        JDatePanelImpl datePanel = new JDatePanelImpl(model);
+        final JDatePickerImpl datePicker = new JDatePickerImpl(datePanel);
+        datePicker.setLocation(144, 59);
+        datePicker.setSize(202, 26);
+        this.add(datePicker);*/
+		
 		textField_1 = new JTextField();
 		textField_1.setBounds(177, 97, 117, 20);
 		contentPane.add(textField_1);
