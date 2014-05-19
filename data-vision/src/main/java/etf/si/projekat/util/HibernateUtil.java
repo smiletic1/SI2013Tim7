@@ -1,7 +1,6 @@
 package etf.si.projekat.util;
 
 
-import org.hibernate.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;

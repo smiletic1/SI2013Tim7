@@ -8,7 +8,9 @@ import org.hibernate.Session;
 
 
 
+
 import ba.unsa.etf.si.beans.ActivityLogs;
+import ba.unsa.etf.si.beans.DeviceName;
 import etf.si.projekat.util.HibernateUtil; 
 
  
@@ -17,28 +19,29 @@ public class Main {
  
  public static void main(String[] args) { 
 	 Session session = HibernateUtil.getSessionFactory().openSession();
-	 dodajActivity(session);
-	 nadjiActivity(session); 
+	 //dodajActivity(session);
+	 //nadjiActivity(session); 
 	 session.close(); 
 	 } 
 	 
 	 private static void dodajActivity(Session session) { 
 	 Transaction t = session.beginTransaction(); 
 	 
-	 ActivityLogs s = new ActivityLogs(); 
-	 s.setCommand("stop");
+	 ActivityLogs s=new ActivityLogs();
+	 s.setActivitylogs_id((long) 2);
+	 s.setCommand("komanda");
+	 s.setFixtureName("JOMU");
 	 s.setGranted(true);
-	 s.setTimestamp(Date.valueOf("2014-05-13"));
-	 s.setUser("Korisnik");
-	 s.setFixtureName("Light");
-	 	 
-	 Long activitylogs_id = (Long) session.save(s); 
-	 System.out.println("Dodan log sa IDom "+activitylogs_id); 
+	 s.setTimestamp(null);
+	 s.setUser("haso");
+	 
+	 Long id = (Long) session.save(s);
+	 System.out.println("Dodan log sa IDom "+id); 
 	 t.commit(); 
 	 } 
 	 
 	 private static void nadjiActivity(Session session) { 
-	 Transaction t = session.beginTransaction(); 
+     Transaction t = session.beginTransaction(); 
 	 
 	 System.out.println("Unesite id loga"); 
 	 long id = sc.nextLong();

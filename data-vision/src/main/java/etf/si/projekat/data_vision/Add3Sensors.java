@@ -7,17 +7,24 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+
 import java.awt.Choice;
+
 import javax.swing.JButton;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import ba.unsa.etf.si.beans.DeviceType;
+import etf.si.projekat.util.HibernateUtil;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.Iterator;
+import java.util.List;
 
 public class Add3Sensors extends JFrame {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
 	/**
@@ -82,6 +89,27 @@ public class Add3Sensors extends JFrame {
 		});
 		btnExit.setBounds(172, 131, 89, 23);
 		contentPane.add(btnExit);
+		Session session = HibernateUtil.getSessionFactory().openSession();
+	    Transaction t=null;
+		try{
+			t = session.beginTransaction(); 
+		    List list = session.createQuery("from DeviceType").list();
+		   
+		     for (Iterator iterator = list.iterator(); iterator.hasNext();){  
+		        DeviceType dt =(DeviceType) iterator.next();
+		        choice.addItem(dt.getType());
+		        choice_1.addItem(dt.getType()); 
+		        choice_2.addItem(dt.getType()); 
+		      }
+		      t.commit();
+	}
+		catch(Exception e)
+	{
+		System.out.println("Error:"+e);
+	}
+		finally{
+			session.close();
+		}
 	}
 
 }

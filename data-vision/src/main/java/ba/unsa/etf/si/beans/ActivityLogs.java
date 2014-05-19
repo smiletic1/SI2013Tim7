@@ -6,10 +6,6 @@ import java.sql.Date;
 
 public class ActivityLogs implements java.io.Serializable{
 
-	/**
-	 * 
-	 */
-
 	Long activitylogs_id;
 	String command;
 	boolean isGranted;

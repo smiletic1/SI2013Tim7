@@ -2,10 +2,6 @@ package ba.unsa.etf.si.beans;
 
 public class User implements java.io.Serializable {
 	
-	/**
-	 * 
-	 */
-
 	long user_id;
 
 	public long getUser_id() {

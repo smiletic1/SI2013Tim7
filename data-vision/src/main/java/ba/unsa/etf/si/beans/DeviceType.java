@@ -1,11 +1,9 @@
 package ba.unsa.etf.si.beans;
 
 public class DeviceType implements java.io.Serializable  {
-	/**
-	 * 
-	 */
-
 	long type_id;
+	String type;
+	
 	public long getType_id() {
 		return type_id;
 	}
@@ -18,8 +16,6 @@ public class DeviceType implements java.io.Serializable  {
 	public void setType(String type) {
 		this.type = type;
 	}
-	String type;
-	
 	public DeviceType() {}
 
 }
