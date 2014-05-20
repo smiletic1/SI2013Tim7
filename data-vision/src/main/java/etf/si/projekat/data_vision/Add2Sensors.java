@@ -32,6 +32,7 @@ public class Add2Sensors extends JFrame {
 	JButton btnProcess = new JButton("Process");
 	ArrayList<DeviceType> list_device = new ArrayList<DeviceType>();
 	private JPanel contentPane;
+	
 
 	/**
 	 * Launch the application.
@@ -75,6 +76,8 @@ public class Add2Sensors extends JFrame {
 		
 		choice_1.setBounds(91, 46, 115, 20);
 		contentPane.add(choice_1);
+		choice.add(" ");
+		choice_1.add(" ");
 		choice.addItemListener(new ItemListener(){
 			public void itemStateChanged(ItemEvent e){
 				fillChoices(1);

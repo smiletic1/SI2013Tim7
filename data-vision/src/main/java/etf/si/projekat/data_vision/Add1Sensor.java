@@ -109,13 +109,13 @@ public class Add1Sensor extends JFrame {
 		btnExit.setBounds(45, 88, 89, 23);
 		contentPane.add(btnExit);
 		
-		
+		choice.add("");
 		choice.setBounds(134, 32, 105, 20);
 		contentPane.add(choice);
 		
 		choice.addItemListener(new ItemListener(){
 			public void itemStateChanged(ItemEvent e){
-				choice.disable();
+				
 				btnProcess.setVisible(true);
 			}
 		});

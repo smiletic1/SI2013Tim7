@@ -101,6 +101,14 @@ public class Add6Sensors extends JFrame {
 		choice_5.setBounds(113, 163, 120, 20);
 		contentPane.add(choice_5);
 		
+
+		choice.add(""); 
+		choice_1.add(""); 
+		choice_2.add("");
+		choice_3.add("");
+		choice_4.add("");
+		choice_5.add("");
+		
 		JButton btnProcess = new JButton("Process");
 		btnProcess.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
