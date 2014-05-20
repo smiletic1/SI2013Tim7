@@ -112,6 +112,24 @@ public class Add3Sensors extends JFrame {
 		choice_1.add(""); 
 		choice_2.add(""); 
 		
+		
+		choice.addItemListener(new ItemListener(){
+			public void itemStateChanged(ItemEvent e){
+				fillChoices(1);
+			}
+		});
+		choice_1.addItemListener(new ItemListener(){
+			public void itemStateChanged(ItemEvent e){
+				fillChoices(2);
+			}
+		});
+		choice_2.addItemListener(new ItemListener(){
+			public void itemStateChanged(ItemEvent e){
+				fillChoices(2);
+			}
+		});
+		
+		
 		JButton btnExit = new JButton("Cancel");
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
