@@ -109,6 +109,14 @@ public class Add7Sensor extends JFrame {
 		choice_6.setBounds(131, 200, 120, 20);
 		contentPane.add(choice_6);
 		
+		choice.add(""); 
+		choice_1.add(""); 
+		choice_2.add("");
+		choice_3.add("");
+		choice_4.add("");
+		choice_5.add("");
+		choice_6.add("");
+		
 
 
 		
