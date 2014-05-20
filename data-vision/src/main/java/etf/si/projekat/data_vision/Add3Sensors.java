@@ -129,6 +129,11 @@ public class Add3Sensors extends JFrame {
 			}
 		});
 		
+	/*	if(choice_2.getSelectedItem() == "" && choice_1.getSelectedItem()=="" && choice.getSelectedItem()=="" ) {
+			btnProcess.setVisible(false);}
+		else{
+			btnProcess.setVisible(true);}*/
+		
 		
 		JButton btnExit = new JButton("Cancel");
 		btnExit.addActionListener(new ActionListener() {
@@ -167,7 +172,7 @@ public class Add3Sensors extends JFrame {
 			if(choice.getSelectedItem() == list_device.get(i).getType()) continue;
 			choice_1.add(list_device.get(i).getType());
 			}
-			choice.disable();
+			
 			
 		}
 		if(k==2){
@@ -175,10 +180,10 @@ public class Add3Sensors extends JFrame {
 				if((choice.getSelectedItem() == list_device.get(i).getType()) || (choice_1.getSelectedItem() == list_device.get(i).getType())) continue;
 				choice_2.add(list_device.get(i).getType());
 				}
-				choice_1.disable();
+				
 		}
 		if(k==3){
-			choice_2.disable();
+			
 			btnProcess.setVisible(true);
 		}	
 	}
