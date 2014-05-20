@@ -41,11 +41,6 @@
       <artifactId>VectorGraphics2D</artifactId>
       <version>0.9.1</version>
     </dependency>
-    <dependency>
-      <groupId>de.erichseifert.gral</groupId>
-      <artifactId>gral-examples</artifactId>
-      <version>0.10</version>
-    </dependency>
 
   </dependencies>
   <repositories>
