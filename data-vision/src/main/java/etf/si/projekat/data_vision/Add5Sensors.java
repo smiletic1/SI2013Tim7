@@ -54,43 +54,43 @@ public class Add5Sensors extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblSensorType = new JLabel("Sensor type 1");
-		lblSensorType.setBounds(20, 54, 86, 14);
+		lblSensorType.setBounds(20, 54, 114, 14);
 		contentPane.add(lblSensorType);
 		
 		JLabel lblSensorType_1 = new JLabel("Sensor type 2");
-		lblSensorType_1.setBounds(20, 79, 86, 14);
+		lblSensorType_1.setBounds(20, 79, 114, 14);
 		contentPane.add(lblSensorType_1);
 		
 		JLabel lblSensorType_2 = new JLabel("Sensor type 3");
-		lblSensorType_2.setBounds(20, 104, 86, 14);
+		lblSensorType_2.setBounds(20, 104, 108, 14);
 		contentPane.add(lblSensorType_2);
 		
 		JLabel lblSensorType_3 = new JLabel("Sensor type 4");
-		lblSensorType_3.setBounds(20, 129, 86, 14);
+		lblSensorType_3.setBounds(20, 129, 108, 14);
 		contentPane.add(lblSensorType_3);
 		
 		JLabel lblSensorType_4 = new JLabel("Sensor type 5");
-		lblSensorType_4.setBounds(20, 154, 86, 14);
+		lblSensorType_4.setBounds(20, 154, 114, 14);
 		contentPane.add(lblSensorType_4);
 		
 		Choice choice = new Choice();
-		choice.setBounds(101, 48, 135, 20);
+		choice.setBounds(140, 73, 135, 20);
 		contentPane.add(choice);
 		
 		Choice choice_1 = new Choice();
-		choice_1.setBounds(101, 73, 135, 20);
+		choice_1.setBounds(140, 48, 135, 20);
 		contentPane.add(choice_1);
 		
 		Choice choice_2 = new Choice();
-		choice_2.setBounds(101, 98, 135, 20);
+		choice_2.setBounds(140, 98, 135, 20);
 		contentPane.add(choice_2);
 		
 		Choice choice_3 = new Choice();
-		choice_3.setBounds(101, 123, 135, 20);
+		choice_3.setBounds(140, 123, 135, 20);
 		contentPane.add(choice_3);
 		
 		Choice choice_4 = new Choice();
-		choice_4.setBounds(101, 148, 135, 20);
+		choice_4.setBounds(140, 149, 135, 20);
 		contentPane.add(choice_4);
 		
 		

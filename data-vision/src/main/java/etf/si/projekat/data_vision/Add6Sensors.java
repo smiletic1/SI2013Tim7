@@ -54,51 +54,51 @@ public class Add6Sensors extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblSensorType = new JLabel("Sensor type 1");
-		lblSensorType.setBounds(26, 47, 93, 14);
+		lblSensorType.setBounds(26, 47, 107, 14);
 		contentPane.add(lblSensorType);
 		
 		JLabel lblSensorType_1 = new JLabel("Sensor type 2");
-		lblSensorType_1.setBounds(26, 71, 93, 14);
+		lblSensorType_1.setBounds(26, 71, 107, 14);
 		contentPane.add(lblSensorType_1);
 		
 		JLabel lblSensorType_2 = new JLabel("Sensor type 3");
-		lblSensorType_2.setBounds(26, 96, 93, 14);
+		lblSensorType_2.setBounds(26, 96, 107, 14);
 		contentPane.add(lblSensorType_2);
 		
 		JLabel lblSensorType_3 = new JLabel("Sensor type 4");
-		lblSensorType_3.setBounds(26, 121, 93, 14);
+		lblSensorType_3.setBounds(26, 121, 107, 14);
 		contentPane.add(lblSensorType_3);
 		
 		JLabel lblSensorType_4 = new JLabel("Sensor type 5");
-		lblSensorType_4.setBounds(26, 144, 93, 14);
+		lblSensorType_4.setBounds(26, 144, 107, 14);
 		contentPane.add(lblSensorType_4);
 		
 		JLabel lblSensorType_5 = new JLabel("Sensor type 6");
-		lblSensorType_5.setBounds(26, 169, 93, 14);
+		lblSensorType_5.setBounds(26, 169, 107, 14);
 		contentPane.add(lblSensorType_5);
 		
 		Choice choice = new Choice();
-		choice.setBounds(113, 41, 120, 20);
+		choice.setBounds(139, 90, 120, 20);
 		contentPane.add(choice);
 		
 		Choice choice_1 = new Choice();
-		choice_1.setBounds(113, 67, 120, 20);
+		choice_1.setBounds(139, 41, 120, 20);
 		contentPane.add(choice_1);
 		
 		Choice choice_2 = new Choice();
-		choice_2.setBounds(113, 90, 120, 20);
+		choice_2.setBounds(139, 65, 120, 20);
 		contentPane.add(choice_2);
 		
 		Choice choice_3 = new Choice();
-		choice_3.setBounds(113, 115, 120, 20);
+		choice_3.setBounds(139, 115, 120, 20);
 		contentPane.add(choice_3);
 		
 		Choice choice_4 = new Choice();
-		choice_4.setBounds(113, 138, 120, 20);
+		choice_4.setBounds(139, 138, 120, 20);
 		contentPane.add(choice_4);
 		
 		Choice choice_5 = new Choice();
-		choice_5.setBounds(113, 163, 120, 20);
+		choice_5.setBounds(139, 164, 120, 20);
 		contentPane.add(choice_5);
 		
 

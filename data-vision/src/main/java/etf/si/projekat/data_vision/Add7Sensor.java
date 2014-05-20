@@ -54,68 +54,63 @@ public class Add7Sensor extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblSensorType = new JLabel("Sensor type 1");
-		lblSensorType.setBounds(27, 54, 87, 14);
+		lblSensorType.setBounds(27, 54, 100, 14);
 		contentPane.add(lblSensorType);
 		
 		JLabel lblSensorType_1 = new JLabel("Sensor type 2");
-		lblSensorType_1.setBounds(27, 79, 87, 14);
+		lblSensorType_1.setBounds(27, 79, 100, 14);
 		contentPane.add(lblSensorType_1);
 		
 		JLabel lblSensorType_2 = new JLabel("Sensor type 3");
-		lblSensorType_2.setBounds(27, 108, 87, 14);
+		lblSensorType_2.setBounds(27, 104, 100, 14);
 		contentPane.add(lblSensorType_2);
 		
 		JLabel lblSensorType_3 = new JLabel("Sensor type 4");
-		lblSensorType_3.setBounds(27, 134, 87, 14);
+		lblSensorType_3.setBounds(27, 129, 87, 14);
 		contentPane.add(lblSensorType_3);
 		
 		JLabel lblSensorType_4 = new JLabel("Sensor type 5");
-		lblSensorType_4.setBounds(27, 160, 87, 14);
+		lblSensorType_4.setBounds(27, 154, 87, 14);
 		contentPane.add(lblSensorType_4);
 		
 		JLabel lblSensorType_5 = new JLabel("Sensor type 6");
-		lblSensorType_5.setBounds(27, 186, 87, 14);
+		lblSensorType_5.setBounds(27, 179, 87, 14);
 		contentPane.add(lblSensorType_5);
 		
 		JLabel lblSensorType_6 = new JLabel("Sensor type 7");
-		lblSensorType_6.setBounds(27, 211, 87, 14);
+		lblSensorType_6.setBounds(27, 204, 87, 14);
 		contentPane.add(lblSensorType_6);
 		
 		Choice choice = new Choice();
-		choice.setBounds(106, 48, 120, 20);
+		choice.setBounds(131, 48, 120, 20);
 		contentPane.add(choice);
 		
 		Choice choice_1 = new Choice();
-		choice_1.setBounds(106, 73, 120, 20);
+		choice_1.setBounds(131, 73, 120, 20);
 		contentPane.add(choice_1);
 		
 		Choice choice_2 = new Choice();
-		choice_2.setBounds(106, 102, 120, 20);
+		choice_2.setBounds(131, 99, 120, 20);
 		contentPane.add(choice_2);
 		
 		Choice choice_3 = new Choice();
-		choice_3.setBounds(106, 128, 120, 20);
+		choice_3.setBounds(131, 123, 120, 20);
 		contentPane.add(choice_3);
 		
 		Choice choice_4 = new Choice();
-		choice_4.setBounds(106, 154, 120, 20);
+		choice_4.setBounds(131, 148, 120, 20);
 		contentPane.add(choice_4);
 		
 		Choice choice_5 = new Choice();
-		choice_5.setBounds(106, 180, 120, 20);
+		choice_5.setBounds(131, 174, 120, 20);
 		contentPane.add(choice_5);
 		
 		Choice choice_6 = new Choice();
-		choice_6.setBounds(106, 205, 120, 20);
+		choice_6.setBounds(131, 200, 120, 20);
 		contentPane.add(choice_6);
 		
-		choice.add(""); 
-		choice_1.add(""); 
-		choice_2.add("");
-		choice_3.add("");
-		choice_4.add("");
-		choice_5.add("");
-		choice_6.add("");
+
+
 		
 		JButton btnProcess = new JButton("Process");
 		btnProcess.addActionListener(new ActionListener() {
