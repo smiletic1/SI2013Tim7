@@ -85,6 +85,12 @@ public class Add2Sensors extends JFrame {
 				fillChoices(2);
 			}
 		});
+		btnProcess.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				//dispose();
+			}
+		});
 		
 		
 		btnProcess.setBounds(190, 98, 89, 23);

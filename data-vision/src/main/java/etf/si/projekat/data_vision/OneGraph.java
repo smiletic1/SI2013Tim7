@@ -19,6 +19,8 @@ import javax.swing.SpinnerNumberModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
+import java.awt.event.InputMethodListener;
+import java.awt.event.InputMethodEvent;
 
 public class OneGraph extends JFrame {
 
@@ -53,30 +55,38 @@ public class OneGraph extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblGraphType = new JLabel("Graph type");
-		lblGraphType.setBounds(111, 50, 60, 14);
+		lblGraphType.setBounds(98, 50, 73, 14);
 		contentPane.add(lblGraphType);
 		
 		JLabel lblTimeIntervalFrom = new JLabel("Time interval from");
-		lblTimeIntervalFrom.setBounds(80, 75, 91, 14);
+		lblTimeIntervalFrom.setBounds(70, 75, 111, 14);
 		contentPane.add(lblTimeIntervalFrom);
 		
 		JLabel lblTimeIntervalTo = new JLabel("Time interval to");
-		lblTimeIntervalTo.setBounds(88, 100, 83, 14);
+		lblTimeIntervalTo.setBounds(80, 100, 91, 14);
 		contentPane.add(lblTimeIntervalTo);
 		
 		JLabel lblDataNumber = new JLabel("Data number");
-		lblDataNumber.setBounds(101, 125, 70, 14);
+		lblDataNumber.setBounds(98, 125, 83, 14);
 		contentPane.add(lblDataNumber);
 		
 		Choice choice = new Choice();
 		choice.setBounds(177, 48, 117, 20);
-		choice.add("Bar");
 		choice.add("Line");
+		choice.add("Bar");
 		contentPane.add(choice);
 		
 		final JSpinner spinner = new JSpinner();
+		spinner.addInputMethodListener(new InputMethodListener() {
+			public void caretPositionChanged(InputMethodEvent arg0) {
+			}
+			public void inputMethodTextChanged(InputMethodEvent arg0) {
+				
+			}
+		});
 		spinner.setModel(new SpinnerNumberModel(1, 1, 9, 1));
 		spinner.setBounds(177, 122, 117, 20);
+		
 		contentPane.add(spinner);
 		
 		Button button = new Button("Continue");
@@ -89,24 +99,28 @@ public class OneGraph extends JFrame {
 					
 					Add1Sensor a = new Add1Sensor();
 					a.setVisible(true);
+					dispose();
 				}
 				
 				else if(value == 2){
 					
 					Add2Sensors a = new Add2Sensors();
 					a.setVisible(true);
+					dispose();
 				}
 				
 				else if(value == 3){
 					
 					Add3Sensors a = new Add3Sensors();
 					a.setVisible(true);
+					dispose();
 				}
 				
 				else if(value == 4){
 						
 						Add4Sensors a = new Add4Sensors();
 						a.setVisible(true);
+						dispose();
 					}
 				
 				
@@ -114,30 +128,35 @@ public class OneGraph extends JFrame {
 					
 					Add5Sensors a = new Add5Sensors();
 					a.setVisible(true);
+					dispose();
 				}
 				
 				else if(value == 6){
 					
 					Add6Sensors a = new Add6Sensors();
 					a.setVisible(true);
+					dispose();
 				}
 				
 				else if(value == 7){
 					
 					Add7Sensor a = new Add7Sensor();
 					a.setVisible(true);
+					dispose();
 				}
 				
 				else if(value == 8){
 					
 					Add8Sensors a = new Add8Sensors();
 					a.setVisible(true);
+					dispose();
 				}
 				
 				else{
 					
 					Add9Sensors a = new Add9Sensors();
 					a.setVisible(true);
+					dispose();
 				}
 				
 				

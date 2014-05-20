@@ -126,6 +126,11 @@ public class Add9Sensors extends JFrame {
 		contentPane.add(choice_8);
 		
 		JButton btnProcess = new JButton("Process");
+		btnProcess.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				//dispose();
+			}
+		});
 		btnProcess.setBounds(261, 259, 89, 23);
 		contentPane.add(btnProcess);
 		

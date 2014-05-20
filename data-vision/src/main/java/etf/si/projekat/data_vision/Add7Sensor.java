@@ -110,6 +110,11 @@ public class Add7Sensor extends JFrame {
 		contentPane.add(choice_6);
 		
 		JButton btnProcess = new JButton("Process");
+		btnProcess.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				//dispose();
+			}
+		});
 		btnProcess.setBounds(277, 246, 89, 23);
 		contentPane.add(btnProcess);
 		

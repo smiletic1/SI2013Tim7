@@ -94,6 +94,11 @@ public class Add5Sensors extends JFrame {
 		contentPane.add(choice_4);
 		
 		JButton btnProcess = new JButton("Process");
+		btnProcess.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				//dispose();
+			}
+		});
 		btnProcess.setBounds(248, 209, 89, 23);
 		contentPane.add(btnProcess);
 		

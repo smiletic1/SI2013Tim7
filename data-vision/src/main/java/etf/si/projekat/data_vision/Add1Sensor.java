@@ -88,6 +88,7 @@ public class Add1Sensor extends JFrame {
 				BarPlotShow bp=new BarPlotShow();
 				//OneGraphShow og=new OneGraphShow();
 			//	og.setVisible(true);
+				dispose();
 				
 				
 			

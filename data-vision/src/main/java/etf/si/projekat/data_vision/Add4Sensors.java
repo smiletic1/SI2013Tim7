@@ -110,6 +110,11 @@ public class Add4Sensors extends JFrame {
 				fillChoices(3);
 			}
 		});
+		btnProcess.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				//dispose();
+			}
+		});
 		
 		
 		btnProcess.setBounds(247, 165, 89, 23);

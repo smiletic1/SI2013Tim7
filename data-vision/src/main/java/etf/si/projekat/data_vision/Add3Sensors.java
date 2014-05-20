@@ -97,6 +97,11 @@ public class Add3Sensors extends JFrame {
 				fillChoices(3);
 			}
 		});
+		btnProcess.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				//dispose();
+			}
+		});
 		
 		
 		btnProcess.setBounds(268, 131, 89, 23);
