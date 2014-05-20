@@ -115,6 +115,7 @@ public class Add2Sensors extends JFrame {
 		     for (Iterator iterator = list.iterator(); iterator.hasNext();){  
 		        DeviceType dt =(DeviceType) iterator.next();
 		        choice.addItem(dt.getType());
+		        choice_1.addItem(dt.getType());
 		        list_device.add(dt);
 		     }
 		   
@@ -138,11 +139,11 @@ public class Add2Sensors extends JFrame {
 			if(choice.getSelectedItem() == list_device.get(i).getType()) continue;
 			choice_1.add(list_device.get(i).getType());
 			}
-			choice.disable();
+			
 			
 		}
 		if(k==2){
-			choice_1.disable();
+	
 			btnProcess.setVisible(true);
 		}	
 	}
